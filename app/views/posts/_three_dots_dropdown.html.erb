@@ -1,0 +1,12 @@
+  <% if  current_user.id == post.user.id  %>
+    <span style="float: right;">
+      <div class="dropdown-container" tabindex="-1">
+        <div class="three-dots"></div>
+        <div class="dropdown">
+          <%= link_to 'Show', show_post_path(post) %>
+          <div><a><%= link_to 'Edit', edit_post_path(post.id) %></a></div>
+          <div><a><%= link_to 'Delete', delete_post_path(post.id) %></a></div>
+        </div>
+      </div>
+    </span>
+  <% end %>
